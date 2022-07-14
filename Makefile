@@ -19,3 +19,11 @@ yee101x101 : test/yee101x101.cpp
 	  -o $(BUILD_DIR)/101x101/yee101x101
 	cd build/101x101; \
 	./yee101x101 
+
+twosources : test/twosources.cpp
+	$(shell [ ! -d $(BUILD_DIR) ] && mkdir -p $(BUILD_DIR))
+	$(shell [ ! -d $(BUILD_DIR)/twosources ] && mkdir -p $(BUILD_DIR)/twosources)
+	g++ $(CPPLIST) test/twosources.cpp -I$(HEADER_DIR1) -I$(HEADER_DIR2) $(LIBS) \
+		-o $(BUILD_DIR)/twosources/twosources
+	cd build/twosources; \
+	./twosources 
