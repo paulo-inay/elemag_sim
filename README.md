@@ -7,11 +7,21 @@ Simple implementation of the Yee algorithm for 2D waves in C++. Creates heatmap 
 * Script for checking and installing requirements (currently libpng, will probably use other libs in the future)
 * Minimize memory usage (execute one step of the algorithm at a time)
 * Create videos with FFMPEG
+* Implement more boundary conditions (currently the boundaries reflect the electromagnetic wave)
 * Optimize performance
 * Other simulations (1D, 3D, other CEM algorithms and visualizations)
 
 ## How to Execute
 
 Make sure you have libpng installed. Simply execute make in your command line in the main directory, the results of all the tests implemented should be in the build directory if everything goes well.
+
+## Example
+Interference pattern caused by the reflection of an electromagnetic wave propagating from a single source.
+
+![EX_IMG1](https://github.com/paulo-inay/elemag_sim/blob/master/eximage.png)
+
+## Algorithm Explanation
+
+TBD
 
 [png++]: https://www.nongnu.org/pngpp/
