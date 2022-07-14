@@ -15,6 +15,11 @@ Simple implementation of the Yee algorithm for 2D waves in C++. Creates heatmap 
 
 Make sure you have libpng installed. Simply execute make in your command line in the main directory, the results of all the tests implemented should be in the build directory if everything goes well.
 
+## Example
+Interference pattern caused by the reflection of an electromagnetic wave propagating from a single source.
+
+![EX_IMG1](https://github.com/paulo-inay/elemag_sim/blob/master/eximage.png)
+
 ## Algorithm Explanation
 
 TBD
