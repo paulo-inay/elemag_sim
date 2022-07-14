@@ -7,6 +7,7 @@ Simple implementation of the Yee algorithm for 2D waves in C++. Creates heatmap 
 * Script for checking and installing requirements (currently libpng, will probably use other libs in the future)
 * Minimize memory usage (execute one step of the algorithm at a time)
 * Create videos with FFMPEG
+* Implement more boundary conditions (currently the boundaries reflect the electromagnetic wave)
 * Optimize performance
 * Other simulations (1D, 3D, other CEM algorithms and visualizations)
 
