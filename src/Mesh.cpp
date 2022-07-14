@@ -150,7 +150,7 @@ void Mesh::yeeAlgorithm()
             }
         }
 
-        for(int j = 0; j < size; j++){ //update mesh H_x
+        for(int j = 0; j < size; j++){ //update mesh H_y
             H_y[n][0][j].value = D_a * H_y[n-1][0][j].value + D_b * E_z[n][0][j].value;
             for(int i = 1; i < size; i++)
                 H_y[n][i][j].value = D_a * H_y[n-1][i][j].value + 
@@ -158,7 +158,7 @@ void Mesh::yeeAlgorithm()
             H_y[n][size][j].value = D_a * H_y[n-1][size][j].value + D_b * (-E_z[n][size-1][j].value);
         }
 
-        for(int i = 0; i < size; i++){
+        for(int i = 0; i < size; i++){ //update mesh H_x
             H_x[n][i][0].value = D_a * H_x[n-1][i][0].value + D_b * (-E_z[n][i][0].value);
             for(int j = 1; j < size; j++){
                 H_x[n][i][j].value = D_a * H_x[n-1][i][j].value + 
