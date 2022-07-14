@@ -9,7 +9,7 @@ Simple implementation of the Yee algorithm for 2D waves in C++. Creates heatmap 
 * Create videos with FFMPEG
 * Implement more boundary conditions (currently the boundaries reflect the electromagnetic wave)
 * Optimize performance
-* Other simulations (1D, 3D, cases with more than one medium, other CEM algorithms and visualizations)
+* Other simulations
   * 1D waves
   * 3D waves
   * Cases with more than one medium
