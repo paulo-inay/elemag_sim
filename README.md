@@ -20,6 +20,10 @@ Interference pattern caused by the reflection of an electromagnetic wave propaga
 
 ![EX_IMG1](https://github.com/paulo-inay/elemag_sim/blob/master/eximage.png)
 
+Waves propagating from two distinct sources.
+
+![EX_IMG2](https://github.com/paulo-inay/elemag_sim/blob/master/eximage2.png)
+
 ## Algorithm Explanation
 
 TBD
