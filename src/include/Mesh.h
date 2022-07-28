@@ -2,6 +2,12 @@
 #include <cmath>
 #include <cassert>
 #include <iostream>
+
+#ifndef HEATMAP_HEADER
+#include "Heatmap.h"
+#define HEATMAP_HEADER
+#endif
+
 using namespace std;
 
 struct XYCoord {

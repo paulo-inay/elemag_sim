@@ -1,5 +1,10 @@
 #include "Elemag_Sim.h"
+
+#ifndef PNG_HEADER
 #include "include/png++/png.hpp"
+#define PNG_HEADER
+#endif
+
 #include <cmath>
 #include <iostream>
 #include <sstream>
