@@ -22,7 +22,7 @@ int main(){
     double delta = 100.0;
     double deltaT = delta/(299792458 * sqrt(2));
     Mesh twosources = Mesh(rows, columns, sigma, sigmaM, epsilon, mu, delta, deltaT);
-
+    
     XYCoord source[2];
     source[0].coordY = source[1].coordY = 50;
     source[0].coordX = 25;
