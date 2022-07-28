@@ -33,7 +33,7 @@ int main(){
         
         stringstream filename;
         fs::create_directory("image");
-        filename << "image/" << "101x101-t" << n * 20 << ".png";
+        filename << "image/" << "101x101-t" << n * 60 << ".png";
         yee101x101.saveAsImage(filename.str());
 
         yee101x101.yeeAlgorithm(60);

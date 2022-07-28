@@ -30,9 +30,8 @@ int main(){
     source[0].value = source[1].value = 1.0;
 
     twosources.setSource(source, 2);
-    //yee11x11.print();
 
-    for(int n = 0; n < total_time / 60; n++){
+    for(int n = 0; n <= total_time / 60; n++){
         stringstream filename;
         fs::create_directory("image");
         filename << "image/" << "twosources-t" << n * 60 << ".png";
