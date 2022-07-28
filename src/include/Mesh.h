@@ -31,7 +31,7 @@ public:
         //dont do it for size and total_time
     void setSource(XYCoord *source, int len) const;
     void setInitial(XYCoord *initial, int len) const; 
-    void yeeAlgorithm();
+    void yeeAlgorithm(int steps);
     void print() const;
     double **getValues(int time) const;
     void saveAsImage() const; // TODO implement image saving directly from this class

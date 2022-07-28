@@ -125,7 +125,7 @@ void Mesh::setInitial(XYCoord *initial, int len) const
     }
 }
 
-void Mesh::yeeAlgorithm()
+void Mesh::yeeAlgorithm(int steps)
 {
     // defining constants for the sake of brevity in math expressions
     double C_a = (1 - sigma * deltaT / (2 * epsilon)) / (1 + sigma * deltaT / (2 * epsilon));
