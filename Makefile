@@ -4,7 +4,7 @@ HEADER_DIR1 = src/include
 HEADER_DIR2 = src
 BUILD_DIR = build
 
-all : yee11x11 yee101x101 twosources
+all : yee11x11 yee101x101 twosources sinewave
 
 yee11x11 : test/yee11x11.cpp
 	$(shell [ ! -d $(BUILD_DIR) ] && mkdir -p $(BUILD_DIR))
@@ -29,3 +29,11 @@ twosources : test/twosources.cpp
 		-o $(BUILD_DIR)/twosources/twosources
 	cd build/twosources; \
 	./twosources 
+
+sinewave : test/sinewave.cpp
+	$(shell [ ! -d $(BUILD_DIR) ] && mkdir -p $(BUILD_DIR))
+	$(shell [ ! -d $(BUILD_DIR)/sinewave ] && mkdir -p $(BUILD_DIR)/sinewave)
+	g++ $(CPPLIST) -g test/sinewave.cpp -I$(HEADER_DIR1) -I$(HEADER_DIR2) $(LIBS) \
+		-o $(BUILD_DIR)/sinewave/sinewave
+	cd build/sinewave; \
+	./sinewave
