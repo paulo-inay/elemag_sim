@@ -2,6 +2,8 @@
 #include <cmath>
 #include <cassert>
 #include <iostream>
+#include <list>
+#include <iterator>
 
 #ifndef HEATMAP_HEADER
 #include "Heatmap.h"
@@ -10,6 +12,8 @@
 
 using namespace std;
 
+enum MESH_TYPE {MESH_EZ, MESH_HY, MESH_HX, MESH_END};
+
 struct XYCoord {
     int coordX;
     int coordY;
@@ -17,24 +21,24 @@ struct XYCoord {
 };
 
 struct MeshElem {
-    bool isSource = 0;
+    //bool isSource = false;
     double value = 0;
 };
 
 class Mesh {
 public:
     Mesh(); 
-    Mesh(int size, int total_time, double sigma, double sigmaM, double epsilon, double mu,
+    Mesh(int rows, int columns, double sigma, double sigmaM, double epsilon, double mu,
         double delta, double deltaT);
     ~Mesh();
     // TODO add setters for sigma, sigmaM, epsilon, mu, delta and deltaT
         //dont do it for size and total_time
-    void setSource(XYCoord *source, int len) const;
+    void setSource(XYCoord *source_input, int len);
     void setInitial(XYCoord *initial, int len) const; 
     void yeeAlgorithm(int steps);
     void print() const;
-    double **getValues(int time) const;
-    void saveAsImage() const; // TODO implement image saving directly from this class
+    double **getValues(int mesh_type) const;
+    void saveAsImage(string filename) const; // TODO implement image saving directly from this class
     void saveAsVideo() const; // TODO research an appropriate api for this
 
 private:
@@ -43,11 +47,11 @@ private:
     double epsilon;
     double mu;
 
-    int size;
-    int total_time;
+    int rows, columns;
 
     double delta;
     double deltaT;
 
-    MeshElem ***E_z, ***H_y, ***H_x;
+    MeshElem **E_z, **H_y, **H_x;
+    list<XYCoord> source;
 };
