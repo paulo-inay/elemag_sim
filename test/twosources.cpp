@@ -38,7 +38,7 @@ int main(){
         twosources.saveAsImage(filename.str());
 
         twosources.yeeAlgorithm(60);
-    }
+    } 
 
     return 0;
 }
