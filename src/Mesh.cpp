@@ -202,7 +202,7 @@ void Mesh::saveAsImage(string filename) const
     Heatmap heatmap = Heatmap(rows, columns, dvalues);
     for(int i = 0; i < rows; i++)
         delete []dvalues[i];
-    delete dvalues;
+    delete []dvalues;
     heatmap.saveAsImage(filename);
 }
 

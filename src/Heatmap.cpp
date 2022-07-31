@@ -37,7 +37,7 @@ Heatmap::~Heatmap()
 {
     for(int i = 0; i < sizeX; i++)
         delete []values[i];
-    delete values;
+    delete []values;
 }
 
 void Heatmap::print()
