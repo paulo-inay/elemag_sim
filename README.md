@@ -3,6 +3,7 @@ Simple implementation of the Yee algorithm for 2D waves in C++. Creates heatmap 
 
 ## Future Developments
 
+* Doxygen documentation
 * Script for checking and installing requirements (currently libpng, will probably use other libs in the future);
 * Create videos;
 * Allow functions to be passed as sources;
